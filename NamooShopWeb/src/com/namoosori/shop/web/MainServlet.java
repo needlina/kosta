@@ -36,12 +36,6 @@ public class MainServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		ProductService ps = NamooShopServiceFactory.getInstance().getProductService();
 		List<Product> productList = ps.getAllProducts();
-		
-		HttpSession session = req.getSession();
-		if (session.getAttribute("loginUser") == null) {
-			resp.sendRedirect("login");
-			return;
-		}
 
 		resp.setContentType("text/html; charset=UTF-8");
 		PrintWriter writer = resp.getWriter();
