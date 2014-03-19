@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/javascript.js" type="text/javascript"></script>
+
+<title>가위바위보 게임</title>
+</head>
+<body>
+<div id="screen">
+</div>
+<h1 id="gameNamePanel">가위바위보 게임</h1>
+
+<div id="gameStart">
+	<input id="startButton" type="button" value="GAME START"/>
+</div>
+
+<div id="choiceMenu">
+	<input id="s1" class="weapons" type="button" value="가위"/>
+	<input id="s2" class="weapons" type="button" value="바위"/>
+	<input id="s3" class="weapons" type="button" value="보"/>
+	
+	<input id="weapon5" class="selected" type="button" value="weapon1"/>
+	<input id="weapon4" class="selected" type="button" value="weapon2"/>
+	<input id="weapon3" class="selected" type="button" value="weapon3"/>
+	<input id="weapon2" class="selected" type="button" value="weapon4"/>
+	<input id="weapon1" class="selected" type="button" value="weapon5"/>
+</div>
+
+<div id="main">
+	<div id="com">
+	<!--<span>com</span><br/>
+		<input id="cW1" class="comWeapons" type="button" value=""/>
+		<input id="cW2" class="comWeapons" type="button" value=""/>
+		<input id="cW3" class="comWeapons" type="button" value=""/>
+		<input id="cW4" class="comWeapons" type="button" value=""/>
+		<input id="cW5" class="comWeapons" type="button" value=""/>
+		<div id="comVictories">
+		<input id="cv1" class="comVictories" type="button" value=""/>
+		<input id="cv2" class="comVictories" type="button" value=""/>
+		<input id="cv3" class="comVictories" type="button" value=""/>
+		<input id="cv4" class="comVictories" type="button" value=""/>
+		<input id="cv5" class="comVictories" type="button" value=""/>
+		</div>
+		<input id="selectedComWeapon" type="button" value="weapon"/>-->
+	</div>
+	
+
+	<div id="player">
+		<span>player</span><br/>
+		<input id="pW1" class="playerWeapons" type="button" value=""/>
+		<input id="pW2" class="playerWeapons" type="button" value=""/>
+		<input id="pW3" class="playerWeapons" type="button" value=""/>
+		<input id="pW4" class="playerWeapons" type="button" value=""/>
+		<input id="pW5" class="playerWeapons" type="button" value=""/>
+		
+		<input id="pv1" class="playerVictories" type="button" value=""/>
+		<input id="pv2" class="playerVictories" type="button" value=""/>
+		<input id="pv3" class="playerVictories" type="button" value=""/>
+		<input id="pv4" class="playerVictories" type="button" value=""/>
+		<input id="pv5" class="playerVictories" type="button" value=""/>
+		
+		<input id="selectedPlayerWeapon" type="button" value="weapon"/>
+
+	</div> 
+</div>
+
+<div id="gameResult" class="white_content">
+	<h1 id="resultHead"></h1><br/>
+	<label class="result">승 : </label><label class="result" id="vicNumber"/></label><br/>
+	<label class="result">패 : </label><label class="result" id="defeatNumber"></label><br/>
+	<label class="result">비김 : </label><label class="result" id="drawNumber"></label><br/><br/>	
+	<input id="restart" type="button" value="재시작"/> <input id="close" type="button" value="종료하기"/>	
+</div>
+
+<div id="fade" class="black_overlay"></div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+#table1 th,td {
+	border-top: 1px solid #222;
+	border-left: 1px solid #222;
+	width: 150px;
+	height: 40px;
+}
+
+#table1 {
+	border-right: 1px solid #222;
+	border-bottom: 1px solid #222;
+	margin-bottom: 10px;
+}
+
+#first {
+width: 500px;
+
+}
+
+#first #lable {
+float:right;
+
+}
+
+.firstRow .bookName  {
+	text-align: center;
+}
+.firstRow .bookPrice{
+	text-align: center;
+}
+
+
+.firstRow {
+	background-color: #EAEAEA;
+	width: 5px;
+}
+
+
+.serialNo {
+	width: 90px;
+	text-align: center;
+}
+
+.bookName {
+	width: 230px;
+	padding-left: 10px;
+	text-align: left;
+}
+
+.bookPrice {
+	width: 100px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+#table2 th,td {
+	border-top: 1px solid #222;
+	border-left: 1px solid #222;
+	width: 150px;
+	height: 40px;
+}
+
+#table2 {
+	border-right: 1px solid #222;
+	border-bottom: 1px solid #222;
+	margin-bottom: 10px;
+}
+
+#table2 {
+width: 500px;
+height: 40px;
+}
+
+.rowName {
+width: 100px;
+height:20px;
+text-align: center;
+}
+
+
+.OrderInfo {
+width: 370px;
+height:20px;
+text-align: left;
+}
+
+
+
+
+#addressText {
+width:220px;
+
+}
+
+
+
+#second {
+	width: 400px;
+	height: 300px;
+}
+
+#second #button {
+	float: right;
+	margin-right:-100px;

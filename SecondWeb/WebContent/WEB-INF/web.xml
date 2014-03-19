@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>SecondWeb</display-name>
+  
+  <context-param>
+	  <description>관리자 ID</description>
+	  <param-name>adminId</param-name>
+	  <param-value>java</param-value>
+  </context-param>
+  
+  <context-param>
+	  <description>관리자 비밀번호</description>
+	  <param-name>password</param-name>
+	  <param-value>abcd</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>HelloWorld</servlet-name>
+  	<servlet-class>com.namoosori.web.servlet.HelloWorldServlet</servlet-class>
+  	
+  	<init-param>
+		<param-name>name</param-name>
+		<param-value>홍길동</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>HelloWorld</servlet-name>
+  	<url-pattern>/hello</url-pattern>  
+  </servlet-mapping>
+  
+  
+  
+  
+</web-app>
