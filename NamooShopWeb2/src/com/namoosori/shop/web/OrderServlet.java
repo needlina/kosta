@@ -53,6 +53,7 @@ public class OrderServlet extends HttpServlet {
 				order.addProduct(ps.getProduct(booksNumber));
 			}
 			req.setAttribute("products", order.getProducts());
+			req.setAttribute("total", order.getTotalPrice());
 			rd.forward(req, resp);
 		}
 	}

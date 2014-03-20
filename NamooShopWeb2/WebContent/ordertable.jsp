@@ -16,9 +16,10 @@
 					<tr>
 						<td class='serialNo'>${product.serialNo}</td>
 						<td class='bookName'>${product.name}</td>
-						<td class='bookPrice'>${product.price}<input type="hidden" value="${product.serialNo}" name="books[]"/></td>
+						<td class='bookPrice'>${product.price}원<input type="hidden" value="${product.serialNo}" name="books[]"/></td>
 					</tr>
 				</c:forEach>
 				</tbody>
 			</table>
+			<label id='totalPrice'>주문금액 : ${total}원</label><br/><br/>
 		</div>

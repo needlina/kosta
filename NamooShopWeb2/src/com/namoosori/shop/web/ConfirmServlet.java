@@ -58,6 +58,7 @@ public class ConfirmServlet extends HttpServlet {
 			req.setAttribute("products", order.getProducts());
 			req.setAttribute("payMethod", order.getPayment());
 			req.setAttribute("address", order.getShipAddress());
+			req.setAttribute("total", order.getTotalPrice());
 			rd.forward(req, resp);
 		}		
 		

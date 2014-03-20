@@ -13,30 +13,89 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript">
-
-function checkForm() {
-	var payment = document.getElementsByName("payMethod");
-	var address = document.getElementById("addressText");
-	for (var i=0;i < payment.length;i++) {
-		if (payment[i].checked && address.value.length > 0){
-			return true;
-		}
-	}
-			alert("모두 입력하세요");
-			return false;
+<style type="text/css">
+div {
+	width: 600px;
 }
 
+div h1 {
+	margin-left: 200px;
+	text-align: center;
+}
 
+div h2 {
+	margin-left: 200px;
+	text-align: center;
+}
 
+div table {
+	width: 400px;
+	margin-left: 35%;
+	margin-right: 35%;
+}
 
+table,td,th {
+	border: 1px solid #D1B2FF;
+	border-radius: 5px 5px 5px 5px;
+}
+
+div #button {
+	float: right;
+	margin-top: 20px;
+	margin-right: -10px;
+}
+
+th {
+	background-color: #D1B2FF;
+	color: white;
+}
+
+tbody .serialNo {
+	width: 60px;
+	text-align: center;
+}
+
+tbody .bookName {
+	width: 180px;
+	padding-left: 10px;
+}
+
+tbody .bookPrice {
+	width: 60px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.rowName {
+	background-color: #D1B2FF;
+	color: white;
+	font-weight: bold
+}
+
+div label {
+float: right;
+	margin-top: 20px;
+}
+</style>
+<title>Insert title here</title>
+<script type="text/javascript">
+	function checkForm() {
+		var payment = document.getElementsByName("payMethod");
+		var address = document.getElementById("addressText");
+		for (var i = 0; i < payment.length; i++) {
+			if (payment[i].checked && address.value.length > 0) {
+				return true;
+			}
+		}
+		alert("모두 입력하세요");
+		return false;
+	}
 </script>
 
 
 </head>
 <body>
-	<h2>${loginUser.name}님로그인 되었습니다.</h2>
+	<h2>[${loginUser.name}님] 로그인 되었습니다.</h2>
 	<form action='confirm.do' method='post'>
 		<div id='first'>
 			<h1>주문상품</h1>
@@ -53,15 +112,16 @@ function checkForm() {
 						<tr>
 							<td class='serialNo'>${product.serialNo}</td>
 							<td class='bookName'>${product.name}</td>
-							<td class='bookPrice'>${product.price}<input type="hidden"
+							<td class='bookPrice'>${product.price}원<input type="hidden"
 								value="${product.serialNo}" name="books[]" /></td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
+			<label>주문금액 : ${total}원</label><br/><br/>
 		</div>
 		<div id='second'>
-			<h1>주문정보 입력</h1>
+			<h2>주문정보 입력</h2>
 			<table id='table2'>
 				<thead>
 					<tr>
