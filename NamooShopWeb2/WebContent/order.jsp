@@ -17,16 +17,18 @@
 <script type="text/javascript">
 
 function checkForm() {
-	var payment = document.getElementsByName[payMethod][0].value;
-	var address = document.getElementById("address").value;
-	
+	var payment = document.getElementsByName("payMethod");
+	var address = document.getElementById("addressText");
 	for (var i=0;i < payment.length;i++) {
-		if (payment[0] == null || address == null){
-			return false;
+		if (payment[i].checked && address.value.length > 0){
+			return true;
 		}
 	}
-	return true;
+			alert("모두 입력하세요");
+			return false;
 }
+
+
 
 
 </script>
@@ -34,10 +36,10 @@ function checkForm() {
 
 </head>
 <body>
-	<h2>${loginUser.name}님 로그인 되었습니다.</h2>
+	<h2>${loginUser.name}님로그인 되었습니다.</h2>
 	<form action='confirm.do' method='post'>
-		<h1>주문상품</h1>
 		<div id='first'>
+			<h1>주문상품</h1>
 			<table id='table1'>
 				<thead>
 					<tr>
@@ -47,13 +49,14 @@ function checkForm() {
 					</tr>
 				</thead>
 				<tbody>
-				<c:forEach var="product" items="${products}">
-					<tr>
-						<td class='serialNo'>${product.serialNo}</td>
-						<td class='bookName'>${product.name}</td>
-						<td class='bookPrice'>${product.price}<input type="hidden" value="${product.serialNo}" name="books[]"/></td>
-					</tr>
-				</c:forEach>
+					<c:forEach var="product" items="${products}">
+						<tr>
+							<td class='serialNo'>${product.serialNo}</td>
+							<td class='bookName'>${product.name}</td>
+							<td class='bookPrice'>${product.price}<input type="hidden"
+								value="${product.serialNo}" name="books[]" /></td>
+						</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 		</div>
@@ -74,7 +77,8 @@ function checkForm() {
 					</tr>
 				</tbody>
 			</table>
-			<input id='button' type='submit' onclick="return checkForm();" value='주문하기' />
+			<input onclick="return checkForm();" id='button' type='submit'
+				value='주문하기' />
 		</div>
 	</form>
 </body>

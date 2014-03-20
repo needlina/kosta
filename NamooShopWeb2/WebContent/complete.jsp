@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form action='main.xhtml' method='post'>
+<div>
+<h1>상품 주문이 완료되었습니다.</h1>
+<input type='submit' id='complete' value='확인' />
+</div>
+</form>
 </body>
 </html>

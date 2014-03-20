@@ -1,12 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+		<div id='first'>
+		<h1>주문상품</h1>
+			<table id='table1'>
+				<thead>
+					<tr>
+						<th class='columnName'>상품번호</th>
+						<th class='columnName'>상품명</th>
+						<th class='columnName'>가격</th>
+					</tr>
+				</thead>
+				<tbody>
+				<c:forEach var="product" items="${products}">
+					<tr>
+						<td class='serialNo'>${product.serialNo}</td>
+						<td class='bookName'>${product.name}</td>
+						<td class='bookPrice'>${product.price}<input type="hidden" value="${product.serialNo}" name="books[]"/></td>
+					</tr>
+				</c:forEach>
+				</tbody>
+			</table>
+		</div>

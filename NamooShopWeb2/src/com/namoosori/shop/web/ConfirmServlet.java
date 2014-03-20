@@ -43,6 +43,8 @@ public class ConfirmServlet extends HttpServlet {
 	
 		ProductService ps = NamooShopServiceFactory.getInstance().getProductService();
 		Order order = new Order();
+		order.setPayment(req.getParameter("payMethod"));
+		order.setShipAddress(req.getParameter("address"));
 		if (req.getParameter("books[]") == null) {
 			resp.sendRedirect("main.xhtml");
 			return;
@@ -54,24 +56,10 @@ public class ConfirmServlet extends HttpServlet {
 				order.addProduct(ps.getProduct(booksNumber));
 			}
 			req.setAttribute("products", order.getProducts());
+			req.setAttribute("payMethod", order.getPayment());
+			req.setAttribute("address", order.getShipAddress());
 			rd.forward(req, resp);
-		}
-		
-		
-		if (req.getParameter("payMethod") == null || req.getParameter("address") == null) {
-			resp.sendRedirect("order.do");
-			return;
-		} else {
-			RequestDispatcher rd = req.getRequestDispatcher("confirm.jsp");
-			req.setAttribute("payMethod", req.getParameter("payMethod"));
-			req.setAttribute("address", req.getParameter("address"));
-			rd.forward(req, resp);
-			return;
-		}
-		
-
-		
-		
+		}		
 		
 	}
 	
