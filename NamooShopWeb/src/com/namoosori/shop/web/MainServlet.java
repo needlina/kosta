@@ -36,7 +36,7 @@ public class MainServlet extends HttpServlet {
 		ProductService ps = NamooShopServiceFactory.getInstance().getProductService();
 		List<Product> productList = ps.getAllProducts();
 
-		resp.setContentType("text/html; charset=UTF-8");
+		/*resp.setContentType("text/html; charset=UTF-8");*/
 		PrintWriter writer = resp.getWriter();
 		writer.println("<html>");
 		writer.println("<head>");
@@ -67,7 +67,7 @@ public class MainServlet extends HttpServlet {
 			writer.println("<td class='serialNo'>" + pr.getSerialNo() + "</td>");
 			writer.println("<td class='bookName'>" + pr.getName() + "</td>");
 			writer.println("<td class='bookPrice'>" + pr.getPrice() + "</td>");
-			writer.println("<td class='like'>" + pr.getStar(pr.getLike()) + "</td>");
+			writer.println("<td class='like'>" + pr.getStar() + "</td>");
 			writer.println("</tr>");
 		}
 		

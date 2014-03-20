@@ -47,12 +47,12 @@ public class Product {
 		this.like = like;
 	}
 	
-	public String getStar(int like) {
+	public String getStar() {
 		String star = "";
-		for(int i = 0; i < like ; i++) {
+		for(int i = 0; i < this.like ; i++) {
 			star += "★";
 		}
-		for(int i = 0; i < 5-like ; i++) {
+		for(int i = 0; i < 5-this.like ; i++) {
 			star += "☆";
 		} 
 		return star;

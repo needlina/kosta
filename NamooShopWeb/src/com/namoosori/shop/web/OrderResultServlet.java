@@ -39,8 +39,8 @@ public class OrderResultServlet extends HttpServlet {
 			return;
 		}
 		
-		req.setCharacterEncoding("UTF-8");
-		resp.setContentType("text/html; charset=UTF-8");
+		/*req.setCharacterEncoding("UTF-8");
+		resp.setContentType("text/html; charset=UTF-8");*/
 		PrintWriter writer = resp.getWriter();
 		Customer person = (Customer) session.getAttribute("loginUser");
 		writer.println("<html>");

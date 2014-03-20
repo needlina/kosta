@@ -29,7 +29,7 @@ public class LoginFormServlet extends HttpServlet {
 			throws ServletException, IOException {
 		//
 
-		resp.setContentType("text/html; charset=UTF-8");
+		/*resp.setContentType("text/html; charset=UTF-8");*/
 		PrintWriter writer = resp.getWriter();
 
 		writer.println("<html>");

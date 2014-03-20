@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@
-	taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,25 +24,18 @@
 
 	<%=request.getAttribute("myName")%><br />
 	<%=request.getParameter("dan")%>
-	${param.dan}
+	${param.dan}<br />
 	<%-- 스크립틀릿 --%>
  	<c:choose>
  	
- 		<c:when test="${param.dan == As}">
+		<c:when test="${param.dan.matches('[2-9]')}">
 			<c:forEach var="num" begin="1" end="9" step="1">
 			${param.dan} * ${num} = ${num*param.dan} <br />
 			</c:forEach>
 		</c:when>
-		
-		<c:when test="${param.dan >= 2 && param.dan <= 9}">
-			<c:forEach var="num" begin="1" end="9" step="1">
-			${param.dan} * ${num} = ${num*param.dan} <br />
-			</c:forEach>
-		</c:when>
-		
 		
 		<c:otherwise>
-	올바른 숫자를 입력하세요!
+	2에서 9까지만 입력하세요
 	</c:otherwise>
 	</c:choose>
 
