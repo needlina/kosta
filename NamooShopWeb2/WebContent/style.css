@@ -61,10 +61,11 @@
 	padding-right: 10px;
 }
 
-.rowName {
+#order2 .rowName {
 	background-color: #D1B2FF;
 	color: white;
-	font-weight: bold
+	font-weight: bold;
+	text-align: center;
 }
 
 #order1 label {
