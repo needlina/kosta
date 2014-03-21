@@ -26,9 +26,6 @@ public class CustomerServiceLogic implements CustomerService {
 	@Override
 	public Customer getCustomer(String userId) {
 		//
-		if (userId.equals("booklove")) {
-			throw new RuntimeException("불량 사용자입니다.");
-		}
 		
 		return customerRepo.findCustomerById(userId);
 	}
