@@ -69,7 +69,7 @@
 }
 
 #order1 label {
-float: right;
+	float: right;
 	margin-top: 20px;
 }
 
@@ -84,33 +84,32 @@ float: right;
 	margin-left: 465px;
 }
 
-#payMethodButton, #addressText {
-border: 0px;
-background: transparent;
+#payMethodButton,#addressText {
+	border: 0px;
+	background: transparent;
 }
-
 
 #complete {
-margin-left: 70px;
-width: 700px;
-height: 150px;
-border: 3px solid #D1B2FF;
-border-radius: 5px 5px 5px 5px;
-background-color: white;
+	margin-left: 70px;
+	width: 700px;
+	height: 150px;
+	border: 3px solid #D1B2FF;
+	border-radius: 5px 5px 5px 5px;
+	background-color: white;
 	color: #D1B2FF;
 }
+
 #complete h1 {
-text-align: center;
+	text-align: center;
 }
 
 #complete #button {
-width: 100px;
-height: 30px;
-margin-top: 3%;
-margin-left: 40%;
-margin-right: 40%
+	width: 100px;
+	height: 30px;
+	margin-top: 3%;
+	margin-left: 40%;
+	margin-right: 40%
 }
-
 
 #login {
 	width: 600px;
@@ -145,16 +144,15 @@ margin-right: 40%
 }
 
 #login #error {
-float: right;
-margin-top: 20px;
-margin-right: 10px;
-color: red;
+	float: right;
+	margin-top: 20px;
+	margin-right: 10px;
+	color: red;
 }
 
-
 #main {
-width: 700px;
-height: 400px;
+	width: 700px;
+	height: 400px;
 }
 
 #main h1 {
@@ -170,14 +168,13 @@ height: 400px;
 
 #main table,td,th {
 	border: 1px solid #D1B2FF;
-	border-radius:5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
 }
 
 #main #button {
-float: right;
-margin-top: 20px;
-right: 100px;
-
+	float: right;
+	margin-top: 20px;
+	right: 100px;
 }
 
 #main th {
@@ -185,10 +182,8 @@ right: 100px;
 	color: white;
 }
 
-
 #main .checkbox {
 	width: 10px;
-	
 }
 
 #main .serialNo {

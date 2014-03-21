@@ -24,9 +24,6 @@ public class ProductServiceLogic implements ProductService {
 	@Override
 	public Product getProduct(int serialNo) {
 		// 
-		if (serialNo == 1) {
-			throw new RuntimeException("해당 상품의 재고가 없습니다.");
-		}
 		
 		return productRepo.findProductByNo(serialNo);
 	}
