@@ -1,0 +1,205 @@
+#full {
+	width: 600px;
+}
+
+#order1 h1 {
+	margin-left: 200px;
+	text-align: center;
+}
+
+#order2 h2 {
+	margin-left: 200px;
+	text-align: center;
+}
+
+#order1 table {
+	width: 400px;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+#order1 table,td,th {
+	border: 1px solid #D1B2FF;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#order2 table,td,th {
+	border: 1px solid #D1B2FF;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#order2 table {
+	width: 400px;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+#order2 #button {
+	float: right;
+	margin-top: 20px;
+	margin-right: -10px;
+}
+
+#order1 th {
+	background-color: #D1B2FF;
+	color: white;
+}
+
+#order1 tbody .serialNo {
+	width: 60px;
+	text-align: center;
+}
+
+#order1 tbody .bookName {
+	width: 180px;
+	padding-left: 10px;
+}
+
+#order1 tbody .bookPrice {
+	width: 60px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.rowName {
+	background-color: #D1B2FF;
+	color: white;
+	font-weight: bold
+}
+
+#order1 label {
+float: right;
+	margin-top: 20px;
+}
+
+#order2 #button {
+	float: right;
+	margin-top: 20px;
+	margin-right: -10px;
+}
+
+#order2 #modify {
+	margin-top: 20px;
+	margin-left: 465px;
+}
+
+#payMethodButton, #addressText {
+border: 0px;
+background: transparent;
+}
+
+
+#complete {
+margin-left: 70px;
+width: 700px;
+height: 150px;
+border: 3px solid #D1B2FF;
+border-radius: 5px 5px 5px 5px;
+background-color: white;
+	color: #D1B2FF;
+}
+#complete h1 {
+text-align: center;
+}
+
+#complete #button {
+width: 100px;
+height: 30px;
+margin-top: 3%;
+margin-left: 40%;
+margin-right: 40%
+}
+
+
+#login {
+	width: 600px;
+	height: 400px;
+}
+
+#login h1 {
+	margin-left: 180px;
+	text-align: center;
+}
+
+#login table {
+	width: 250px;
+	margin-left: 45%;
+	margin-right: 45%;
+}
+
+#login table,td,th {
+	border: 1px solid #D1B2FF;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#login #button {
+	float: right;
+	margin-top: 20px;
+	margin-right: 80px;
+}
+
+#login th {
+	background-color: #D1B2FF;
+	color: white;
+}
+
+
+#main {
+width: 700px;
+height: 400px;
+}
+
+#main h1 {
+	margin-left: 110px;
+	text-align: center;
+}
+
+#main table {
+	width: 600px;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+#main table,td,th {
+	border: 1px solid #D1B2FF;
+	border-radius:5px 5px 5px 5px;
+}
+
+#main #button {
+float: right;
+margin-top: 20px;
+right: 100px;
+
+}
+
+#main th {
+	background-color: #D1B2FF;
+	color: white;
+}
+
+
+#main .checkbox {
+	width: 10px;
+	
+}
+
+#main .serialNo {
+	width: 60px;
+	text-align: center;
+}
+
+#main .bookName {
+	width: 180px;
+	padding-left: 10px;
+}
+
+#main .bookPrice {
+	width: 60px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+#main .like {
+	width: 30px;
+	text-align: center;
+}
