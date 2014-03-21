@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style type="text/css">
-div {
+<link rel='stylesheet' type='text/css' href='./style.css'/>
+<title>주문 완료</title>
+<!-- <style type="text/css">
+#complete {
 margin-left: 70px;
 width: 700px;
 height: 150px;
@@ -15,11 +16,11 @@ border-radius: 5px 5px 5px 5px;
 background-color: white;
 	color: #D1B2FF;
 }
-div h1 {
+#complete h1 {
 text-align: center;
 }
 
-#complete {
+#complete #button {
 width: 100px;
 height: 30px;
 margin-top: 3%;
@@ -30,16 +31,16 @@ margin-right: 40%
 
 
 
-</style>
+</style> -->
 
 
 
 </head>
 <body>
 	<form action="main.xhtml" method="post">
-		<div>
+		<div id='complete'>
 			<h1>상품 주문이 완료되었습니다.</h1>
-			<input type="submit" id="complete" value="확인">
+			<input type="submit" id="button" value="확인">
 		</div>
 	</form>
 </body>

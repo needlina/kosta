@@ -46,7 +46,7 @@ public class OrderServlet extends HttpServlet {
 		if (req.getParameter("books[]") == null) {
 			resp.sendRedirect("main.xhtml");
 		} else {
-			RequestDispatcher rd = req.getRequestDispatcher("order.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/order.jsp");
 			String[] books = req.getParameterValues("books[]");
 			for(int i = 0;i < books.length;i++) {
 				int booksNumber = Integer.parseInt(books[i]);

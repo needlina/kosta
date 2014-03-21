@@ -35,7 +35,7 @@ public class MainServlet extends HttpServlet {
 		//
 		ProductService service = NamooShopServiceFactory.getInstance().getProductService();
 		List<Product> products = service.getAllProducts();
-		RequestDispatcher rd = req.getRequestDispatcher("main.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/main.jsp");
 		req.setAttribute("products", products);
 		rd.forward(req, resp);
 		

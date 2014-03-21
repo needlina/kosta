@@ -49,7 +49,7 @@ public class ConfirmServlet extends HttpServlet {
 			resp.sendRedirect("main.xhtml");
 			return;
 		} else {
-			RequestDispatcher rd = req.getRequestDispatcher("confirm.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/confirm.jsp");
 			String[] books = req.getParameterValues("books[]");
 			for(int i = 0;i < books.length;i++) {
 				int booksNumber = Integer.parseInt(books[i]);

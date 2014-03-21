@@ -7,57 +7,59 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style type="text/css">
-div {
+<link rel='stylesheet' type='text/css' href='./style.css'/>
+<title>로그인</title>
+<!-- <style type="text/css">
+#login {
 	width: 600px;
 	height: 400px;
 }
 
-div h1 {
+#login h1 {
 	margin-left: 180px;
 	text-align: center;
 }
 
-div table {
+#login table {
 	width: 250px;
 	margin-left: 45%;
 	margin-right: 45%;
 }
 
-table,td,th {
+#login table,td,th {
 	border: 1px solid #D1B2FF;
 	border-radius: 5px 5px 5px 5px;
 }
 
-div #button {
+#login #button {
 	float: right;
 	margin-top: 20px;
 	margin-right: 80px;
 }
 
-th {
+#login th {
 	background-color: #D1B2FF;
 	color: white;
 }
-</style>
+</style> -->
 </head>
 <body>
 	<form action='login.do' method='post'>
-		<div>
+		<div id="login">
 			<h1>로그인</h1>
 			<table id='form'>
 				<tr>
 					<th class='loginID'><label>로그인 ID</label></th>
-					<td class='loginID'><input type='text' name='loginID' /></td>
+					<td class='loginID'><input type='text' name='loginID' value="${loginID}"/></td>
 				</tr>
 				<tr>
 					<th><label>패스워드</label></th>
-					<td><input type='password' name='loginPW' /></td>
+					<td><input type='password' name='loginPW' value="${loginPW}"/></td>
 				</tr>
 				</tbody>
 			</table>
 			<input id='button' type='submit' value='로그인' />
+			<label id='error'>${error}</label>
 		</div>
 	</form>
 </body>

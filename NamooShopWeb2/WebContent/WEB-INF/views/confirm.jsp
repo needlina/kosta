@@ -5,62 +5,67 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style type="text/css">
-div {
+<link rel='stylesheet' type='text/css' href='./style.css'/>
+<title>주문 확인</title>
+<!-- <style type="text/css">
+#full {
 	width: 600px;
 }
 
-div h1 {
+#order1 h1 {
 	margin-left: 200px;
 	text-align: center;
 }
 
-div h2 {
+#order2 h2 {
 	margin-left: 200px;
 	text-align: center;
 }
 
-div table {
+#order1 table {
 	width: 400px;
 	margin-left: 35%;
 	margin-right: 35%;
 }
 
-table,td,th {
+#order1 table,td,th {
 	border: 1px solid #D1B2FF;
 	border-radius: 5px 5px 5px 5px;
 }
 
-div #modify {
-	margin-top: 20px;
-	margin-left: 465px;
+#order2 table,td,th {
+	border: 1px solid #D1B2FF;
+	border-radius: 5px 5px 5px 5px;
 }
 
-div #button {
+#order2 table {
+	width: 400px;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+#order2 #button {
 	float: right;
 	margin-top: 20px;
 	margin-right: -10px;
 }
 
-
-
-th {
+#order1 th {
 	background-color: #D1B2FF;
 	color: white;
 }
 
-tbody .serialNo {
+#order1 tbody .serialNo {
 	width: 60px;
 	text-align: center;
 }
 
-tbody .bookName {
+#order1 tbody .bookName {
 	width: 180px;
 	padding-left: 10px;
 }
 
-tbody .bookPrice {
+#order1 tbody .bookPrice {
 	width: 60px;
 	text-align: right;
 	padding-right: 10px;
@@ -72,16 +77,28 @@ tbody .bookPrice {
 	font-weight: bold
 }
 
-#payMethodButton, #addressText {
-border: 0px;
-background: transparent;
-}
-div label {
+#order1 label {
 float: right;
 	margin-top: 20px;
 }
 
-</style>
+#order2 #button {
+	float: right;
+	margin-top: 20px;
+	margin-right: -10px;
+}
+
+#order2 #modify {
+	margin-top: 20px;
+	margin-left: 465px;
+}
+
+#payMethodButton, #addressText {
+border: 0px;
+background: transparent;
+}
+
+</style> -->
 
 <script type="text/javascript">
 function back() {
@@ -94,9 +111,10 @@ function back() {
 <body>
 	<h2>[${loginUser.name}님] 로그인 되었습니다.</h2>
 	<form action='complete.do' method='post'>
-	<%@ include file="/ordertable.jsp" %>
+	<div id="full">
+	<%@ include file="/WEB-INF/views/ordertable.jsp" %>
 
-		<div id='second'>
+		<div id='order2'>
 			<h2>주문정보 입력</h2>
 			<table id='table2'>
 				<thead>
@@ -113,7 +131,8 @@ function back() {
 				</tbody>
 			</table>
 			<input id='modify' onclick='back();' type='button' value='수정하기' />
-			<input id='button' type='submit' value='주문하기' />
+			<input id='button' type='submit' value='신청완료' />
+		</div>
 		</div>
 	</form>
 </body>

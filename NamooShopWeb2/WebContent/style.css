@@ -143,6 +143,13 @@ margin-right: 40%
 	color: white;
 }
 
+#login #error {
+float: right;
+margin-top: 20px;
+margin-right: 10px;
+color: red;
+}
+
 
 #main {
 width: 700px;

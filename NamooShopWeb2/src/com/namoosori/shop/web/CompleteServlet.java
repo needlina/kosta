@@ -2,6 +2,7 @@ package com.namoosori.shop.web;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,7 +36,8 @@ public class CompleteServlet extends HttpServlet {
 		Order order = new Order();
 		os.order(order);
 		if (os.order(order)) {
-			resp.sendRedirect("complete.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/complete.jsp");
+			rd.forward(req, resp);
 		}
 	}
 	

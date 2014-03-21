@@ -42,7 +42,12 @@ public class LoginServlet extends HttpServlet {
 			RequestDispatcher rd = req.getRequestDispatcher("main.xhtml");
 			rd.forward(req,resp);
 		} else {
-			resp.sendRedirect("login.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
+			String msg = "로그인 정보가 잘못되었습니다.";
+			req.setAttribute("error", msg);
+			req.setAttribute("loginID", req.getParameter("loginID"));
+			req.setAttribute("loginPW", req.getParameter("loginPW"));
+			rd.forward(req,resp);
 		}
 		
 	}

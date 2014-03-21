@@ -6,81 +6,83 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="namoo" uri="WEB-INF/namoosori.tld"%>
+<%@ taglib prefix="namoo" uri="/WEB-INF/namoosori.tld"%>
+<%@ taglib prefix="my" uri="/WEB-INF/mytag.tld"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<style type="text/css">
-div {
+<link rel='stylesheet' type='text/css' href='./style.css'/>
+<!-- <style type="text/css">
+#main {
 width: 700px;
 height: 400px;
 }
 
-div h1 {
+#main h1 {
 	margin-left: 110px;
 	text-align: center;
 }
 
-div table {
+#main table {
 	width: 600px;
 	margin-left: 15%;
 	margin-right: 15%;
 }
 
-table,td,th {
+#main table,td,th {
 	border: 1px solid #D1B2FF;
 	border-radius:5px 5px 5px 5px;
 }
 
-div #button {
+#main #button {
 float: right;
 margin-top: 20px;
 right: 100px;
 
 }
 
-th {
+#main th {
 	background-color: #D1B2FF;
 	color: white;
 }
 
 
-tbody .checkbox {
+#main .checkbox {
 	width: 10px;
 	
 }
 
-tbody .serialNo {
+#main .serialNo {
 	width: 60px;
 	text-align: center;
 }
 
-tbody .bookName {
+#main .bookName {
 	width: 180px;
 	padding-left: 10px;
 }
 
-tbody .bookPrice {
+#main .bookPrice {
 	width: 60px;
 	text-align: right;
 	padding-right: 10px;
 }
 
-tbody .like {
+#main .like {
 	width: 30px;
 	text-align: center;
 }
-</style>
+</style> -->
 
 
 
-<title>Insert title here</title>
+<title>상품 목록</title>
 </head>
 <body>
 
 	<form action='order.do' method='post'>
-		<div id='table'>
+		<div id='main'>
 			<h1>상품 목록</h1>
 			<table>
 				<thead>
@@ -99,8 +101,8 @@ tbody .like {
 								value="${product.serialNo}" /></th>
 							<td class='serialNo'>${product.serialNo}</td>
 							<td class='bookName'>${product.name}</td>
-							<td class='bookPrice'>${product.price}원</td>
-							<td class='like'><namoo:converStar count="${product.like}" /></td>
+							<td class='bookPrice'><my:currency value="${product.price}"/>원</td>
+							<td class='like'><my:circle count="${product.like}"/></td>
 						</tr>
 					</c:forEach>
 				</tbody>
