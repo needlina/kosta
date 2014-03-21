@@ -9,39 +9,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel='stylesheet' type='text/css' href='./style.css'/>
 <title>로그인</title>
-<!-- <style type="text/css">
-#login {
-	width: 600px;
-	height: 400px;
-}
-
-#login h1 {
-	margin-left: 180px;
-	text-align: center;
-}
-
-#login table {
-	width: 250px;
-	margin-left: 45%;
-	margin-right: 45%;
-}
-
-#login table,td,th {
-	border: 1px solid #D1B2FF;
-	border-radius: 5px 5px 5px 5px;
-}
-
-#login #button {
-	float: right;
-	margin-top: 20px;
-	margin-right: 80px;
-}
-
-#login th {
-	background-color: #D1B2FF;
-	color: white;
-}
-</style> -->
 </head>
 <body>
 	<form action='login.do' method='post'>
